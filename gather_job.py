@@ -5,14 +5,15 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import openpyxl
+import sec
 
 # Initialize WebDriver
 driver = webdriver.Chrome()
 
 # Log in to Naukri
 driver.get("https://www.naukri.com/nlogin/login")
-email = "EMAIL"
-password = "PASSWORD"
+email = sec.email
+password = sec.passw
 
 try:
     email_input = WebDriverWait(driver, 10).until(
